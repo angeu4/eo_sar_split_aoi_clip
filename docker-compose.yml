@@ -1,0 +1,23 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
+  api:
+    build: ./app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    depends_on:
+      - worker
+
+  worker:
+    build: ./worker
+    volumes:
+      - ./data:/data
+    expose:
+      - "5000"
