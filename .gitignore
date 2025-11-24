@@ -2,3 +2,9 @@
 eo_clipped_3857.tif
 sar_clipped_4326.tif
 Software Engineer Lead Assignment.docx
+__pycache__
+.pytest_cache
+test_integration.db
+test.db
+.ruff_cache
+app.log
